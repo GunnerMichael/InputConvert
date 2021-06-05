@@ -27,5 +27,10 @@ namespace InputConvert
         {
             outputText.Text = new ConvertToArray().Convert(inputText.Lines);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            outputText.Text = new ConvertToSqlInStatement().Convert(inputText.Lines, quoted: false);
+        }
     }
 }

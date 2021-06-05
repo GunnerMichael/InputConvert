@@ -35,8 +35,11 @@ namespace InputConvert
             this.toStringBuilderCommand = new System.Windows.Forms.Button();
             this.toArrayCommand = new System.Windows.Forms.Button();
             this.outputText = new System.Windows.Forms.TextBox();
+            this.sqlInGroup = new System.Windows.Forms.GroupBox();
+            this.toInCommand = new System.Windows.Forms.Button();
             this.cSharpGroup.SuspendLayout();
             this.cSharpLayout.SuspendLayout();
+            this.sqlInGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // inputText
@@ -46,7 +49,7 @@ namespace InputConvert
             this.inputText.Location = new System.Drawing.Point(17, 23);
             this.inputText.Multiline = true;
             this.inputText.Name = "inputText";
-            this.inputText.Size = new System.Drawing.Size(1328, 442);
+            this.inputText.Size = new System.Drawing.Size(1791, 442);
             this.inputText.TabIndex = 0;
             // 
             // cSharpGroup
@@ -54,11 +57,10 @@ namespace InputConvert
             this.cSharpGroup.Controls.Add(this.cSharpLayout);
             this.cSharpGroup.Location = new System.Drawing.Point(17, 500);
             this.cSharpGroup.Name = "cSharpGroup";
-            this.cSharpGroup.Size = new System.Drawing.Size(737, 179);
+            this.cSharpGroup.Size = new System.Drawing.Size(737, 129);
             this.cSharpGroup.TabIndex = 1;
             this.cSharpGroup.TabStop = false;
             this.cSharpGroup.Text = "C#";
-
             // 
             // cSharpLayout
             // 
@@ -96,14 +98,35 @@ namespace InputConvert
             this.outputText.Location = new System.Drawing.Point(17, 661);
             this.outputText.Multiline = true;
             this.outputText.Name = "outputText";
-            this.outputText.Size = new System.Drawing.Size(1328, 253);
+            this.outputText.Size = new System.Drawing.Size(1791, 253);
             this.outputText.TabIndex = 2;
+            // 
+            // sqlInGroup
+            // 
+            this.sqlInGroup.Controls.Add(this.toInCommand);
+            this.sqlInGroup.Location = new System.Drawing.Point(945, 500);
+            this.sqlInGroup.Name = "sqlInGroup";
+            this.sqlInGroup.Size = new System.Drawing.Size(668, 129);
+            this.sqlInGroup.TabIndex = 3;
+            this.sqlInGroup.TabStop = false;
+            this.sqlInGroup.Text = "SQL IN";
+            // 
+            // toInCommand
+            // 
+            this.toInCommand.Location = new System.Drawing.Point(6, 47);
+            this.toInCommand.Name = "toInCommand";
+            this.toInCommand.Size = new System.Drawing.Size(188, 58);
+            this.toInCommand.TabIndex = 0;
+            this.toInCommand.Text = "To In";
+            this.toInCommand.UseVisualStyleBackColor = true;
+            this.toInCommand.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 945);
+            this.ClientSize = new System.Drawing.Size(1820, 945);
+            this.Controls.Add(this.sqlInGroup);
             this.Controls.Add(this.outputText);
             this.Controls.Add(this.cSharpGroup);
             this.Controls.Add(this.inputText);
@@ -111,6 +134,7 @@ namespace InputConvert
             this.Text = "Form1";
             this.cSharpGroup.ResumeLayout(false);
             this.cSharpLayout.ResumeLayout(false);
+            this.sqlInGroup.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +148,8 @@ namespace InputConvert
         private System.Windows.Forms.Button toStringBuilderCommand;
         private System.Windows.Forms.Button toArrayCommand;
         private System.Windows.Forms.TextBox outputText;
+        private System.Windows.Forms.GroupBox sqlInGroup;
+        private System.Windows.Forms.Button toInCommand;
     }
 }
 
