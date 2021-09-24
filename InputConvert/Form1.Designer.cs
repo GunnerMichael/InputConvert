@@ -1,4 +1,4 @@
-﻿
+
 namespace InputConvert
 {
     partial class InputConvert
