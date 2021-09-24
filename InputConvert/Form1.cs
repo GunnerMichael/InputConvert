@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InputConvert
 {
-    public partial class Form1 : Form
+    public partial class InputConvert : Form
     {
-        public Form1()
+        public InputConvert()
         {
             InitializeComponent();
         }
@@ -26,6 +26,16 @@ namespace InputConvert
         private void toArrayCommand_Click(object sender, EventArgs e)
         {
             outputText.Text = new ConvertToArray().Convert(inputText.Lines);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            outputText.Text = new ConvertToSqlIn().Convert(inputText.Lines, true);
+        }
+
+        private void unquotedIn_Click(object sender, EventArgs e)
+        {
+            outputText.Text = new ConvertToSqlIn().Convert(inputText.Lines, false);
         }
     }
 }
